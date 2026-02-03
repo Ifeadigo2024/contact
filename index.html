@@ -3,185 +3,252 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nizuteck — Contact</title>
-  <meta name="description" content="Contact Nizuteck — WhatsApp, Twitter/X, Instagram, TikTok, Portfolio." />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Nizuteck - Contact</title>
+  <meta name="description" content="Contact Nizuteck via email, WhatsApp, X, Instagram, and TikTok." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
-    :root{
-      --bg:#0b0f14;
-      --card:#0f1621;
-      --text:#eaf2ff;
-      --muted:#9db0c9;
-      --line:rgba(255,255,255,.08);
-      --btn:rgba(255,255,255,.06);
-      --btnHover:rgba(255,255,255,.10);
-      --accent:#4da3ff;
+    :root {
+      --bg: #070b12;
+      --surface: rgba(12, 19, 33, 0.78);
+      --surface-strong: rgba(10, 16, 28, 0.92);
+      --line: rgba(136, 174, 255, 0.25);
+      --text: #ecf3ff;
+      --muted: rgba(214, 227, 250, 0.75);
+      --accent: #2f6bff;
+      --accent-strong: #1b4ed6;
+      --radius: 18px;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background: radial-gradient(900px 500px at 20% 10%, rgba(77,163,255,.18), transparent 60%),
-                  radial-gradient(700px 450px at 90% 20%, rgba(148,92,255,.12), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:28px 16px;
+      color: var(--text);
+      background:
+        radial-gradient(900px 540px at 10% -10%, rgba(47, 107, 255, 0.26), transparent 62%),
+        radial-gradient(700px 520px at 95% 10%, rgba(47, 107, 255, 0.14), transparent 64%),
+        linear-gradient(180deg, #09111f 0%, var(--bg) 54%, #05080f 100%);
+      padding: 24px 16px 36px;
     }
-    .wrap{width:min(520px, 100%);}
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:22px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-      backdrop-filter: blur(8px);
+
+    .page {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
     }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-bottom:12px;
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.42);
     }
-    .logo{
-      width:44px;height:44px;border-radius:14px;
-      display:grid;place-items:center;
-      background: rgba(77,163,255,.14);
-      border:1px solid rgba(77,163,255,.25);
-      color:var(--accent);
-      font-weight:800;
-      letter-spacing:.5px;
+
+    .hero {
+      padding: 28px;
+      background:
+        linear-gradient(140deg, rgba(47, 107, 255, 0.2), rgba(9, 14, 24, 0.9));
     }
-    h1{font-size:20px; margin:0}
-    p{margin:6px 0 0; color:var(--muted); font-size:14px; line-height:1.5}
-    .links{display:grid; gap:10px; margin-top:16px}
-    a.btn{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:13px 14px;
-      border-radius:14px;
-      text-decoration:none;
-      color:var(--text);
-      background: var(--btn);
-      border:1px solid var(--line);
-      transition:.18s ease;
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(152, 186, 255, 0.45);
+      color: #d6e6ff;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
     }
-    a.btn:hover{background:var(--btnHover); transform: translateY(-1px);}
-    .left{display:flex; align-items:center; gap:10px;}
-    .icon{
-      width:34px;height:34px;border-radius:12px;
-      display:grid;place-items:center;
-      border:1px solid var(--line);
-      background: rgba(0,0,0,.15);
-      font-size:15px;
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(1.8rem, 4.8vw, 2.6rem);
+      line-height: 1.1;
     }
-    .label{font-weight:600; font-size:14px}
-    .hint{font-size:12px; color:var(--muted)}
-    .arrow{color:var(--muted)}
-    .footer{
-      margin-top:14px;
-      text-align:center;
-      color:var(--muted);
-      font-size:12px;
+
+    .hero p {
+      margin: 0;
+      max-width: 56ch;
+      color: var(--muted);
+      line-height: 1.65;
     }
-    .footer a{color:var(--muted)}
+
+    .actions {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.92rem;
+      border-radius: 12px;
+      padding: 0.78rem 1rem;
+      border: 1px solid var(--line);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: 0.18s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      border-color: rgba(174, 201, 255, 0.38);
+    }
+
+    .btn-secondary {
+      background: rgba(47, 107, 255, 0.12);
+    }
+
+    .grid {
+      padding: 18px;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card {
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: var(--surface-strong);
+      text-decoration: none;
+      color: inherit;
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      transition: 0.18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(170, 198, 255, 0.5);
+      background: rgba(14, 22, 38, 0.95);
+    }
+
+    .card-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 11px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      background: rgba(47, 107, 255, 0.14);
+      color: #d5e5ff;
+      font-size: 0.95rem;
+    }
+
+    .label { font-weight: 650; font-size: 0.95rem; }
+    .handle { color: var(--muted); font-size: 0.84rem; }
+
+    .process {
+      padding: 18px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .step {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: rgba(10, 17, 29, 0.82);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 20px; }
+      .actions .btn { width: 100%; justify-content: center; }
+    }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="card">
-      <div class="brand">
-        <div class="logo">NZ</div>
-        <div>
-          <h1>Nizuteck</h1>
-          <p>Let’s connect. Pick a platform below.</p>
-        </div>
-      </div>
-
-      <div class="links">
-        <!-- WhatsApp: replace with your number and optional message -->
-        <a class="btn" href="https://wa.me/2349073018211?text=Hi%20Nizuteck%2C%20I%20need%20a%20website." target="_blank" rel="noopener">
-          <div class="left">
-            <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
-            <div>
-              <div class="label">WhatsApp</div>
-              <div class="hint">Chat directly</div>
-            </div>
-          </div>
-          <div class="arrow">→</div>
+  <main class="page">
+    <section class="panel hero">
+      <span class="eyebrow">Contact Nizuteck</span>
+      <h1>Let us build something clear, fast, and scalable.</h1>
+      <p>
+        Send your project goals and timeline. We will guide you to the best next step.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:hello@nizuteck.com?subject=Project%20Inquiry%20-%20Nizuteck">
+          <i class="fa-regular fa-envelope"></i>
+          Email us
         </a>
-
-        <!-- Twitter/X -->
-        <a class="btn" href="https://x.com/nizuteck" target="_blank" rel="noopener">
-          <div class="left">
-            <div class="icon"><i class="fa-brands fa-x-twitter"></i></div>
-            <div>
-              <div class="label">Twitter / X</div>
-              <div class="hint">@nizuteck</div>
-            </div>
-          </div>
-          <div class="arrow">→</div>
+        <a class="btn btn-secondary" href="https://wa.me/2349073018211?text=Hi%20Nizuteck%2C%20I%20need%20a%20website." target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          WhatsApp
         </a>
-
-        <!-- Facebook -->
-        <a class="btn" href="https://www.facebook.com/share/17hKmpV7Wz/" target="_blank" rel="noopener">
-          <div class="left">
-            <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
-            <div>
-              <div class="label">Facebook</div>
-              <div class="hint">@nizuteck</div>
-            </div>
-          </div>
-          <div class="arrow">→</div>
-        </a>
-
-        <!-- Instagram -->
-        <a class="btn" href="https://instagram.com/nizuteck" target="_blank" rel="noopener">
-          <div class="left">
-            <div class="icon"><i class="fa-brands fa-instagram"></i></div>
-            <div>
-              <div class="label">Instagram</div>
-              <div class="hint">@nizuteck</div>
-            </div>
-          </div>
-          <div class="arrow">→</div>
-        </a>
-
-        <!-- TikTok -->
-        <a class="btn" href="https://tiktok.com/@.nizuteck" target="_blank" rel="noopener">
-          <div class="left">
-            <div class="icon"><i class="fa-brands fa-tiktok"></i></div>
-            <div>
-              <div class="label">TikTok</div>
-              <div class="hint">@.nizuteck</div>
-            </div>
-          </div>
-          <div class="arrow">→</div>
-        </a>
-
-        <!-- Portfolio -->
-        <!-- <a class="btn" href="https://your-portfolio.com" target="_blank" rel="noopener">
-          <div class="left">
-            <div class="icon">🌐</div>
-            <div>
-              <div class="label">Portfolio</div>
-              <div class="hint">View projects</div>
-            </div>
-          </div>
-          <div class="arrow">→</div>
-        </a> -->
-      </div>
-
-      <div class="footer">
-        © <span id="y"></span> Nizuteck • Built minimal, built clean.
       </div>
     </section>
+
+    <section class="panel grid" aria-label="Social links">
+      <a class="card" href="https://x.com/nizuteck" target="_blank" rel="noopener">
+        <div class="card-head">
+          <span class="icon"><i class="fa-brands fa-x-twitter"></i></span>
+          <div>
+            <div class="label">Twitter / X</div>
+            <div class="handle">@nizuteck</div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="https://instagram.com/nizuteck" target="_blank" rel="noopener">
+        <div class="card-head">
+          <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+          <div>
+            <div class="label">Instagram</div>
+            <div class="handle">@nizuteck</div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="https://tiktok.com/@nizuteck" target="_blank" rel="noopener">
+        <div class="card-head">
+          <span class="icon"><i class="fa-brands fa-tiktok"></i></span>
+          <div>
+            <div class="label">TikTok</div>
+            <div class="handle">@nizuteck</div>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <section class="panel process" aria-label="What happens next">
+      <div class="step">1. You share your project idea and timeline.</div>
+      <div class="step">2. We reply with direction, scope clarity, and a practical next action.</div>
+      <div class="step">3. We move into a focused build plan.</div>
+    </section>
+
+    <div class="footer">© <span id="year"></span> Nizuteck</div>
   </main>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
